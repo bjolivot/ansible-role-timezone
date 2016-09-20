@@ -1,0 +1,6 @@
+---
+# here comes env checking
+
+- name: Check {{tz_string}} var
+  debug: msg="Cheking {{ tz_string | mandatory  }} "
+  tags: check

@@ -1,0 +1,10 @@
+---
+# here comes the real playbook, executed after env check
+
+- name: set localtime
+  file: src=/usr/share/zoneinfo/{{ tz_string }} dest=/etc/localtime state=link
+  notify: upgrade_tzdata
+
+- name: set /etc/timezone
+  template: src=timezone.j2 dest=/etc/timezone
+  notify: upgrade_tzdata

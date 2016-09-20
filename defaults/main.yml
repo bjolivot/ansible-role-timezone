@@ -1,0 +1,6 @@
+---
+#here comes default vars for your role
+#
+
+
+tz_string: "Europe/Paris"
